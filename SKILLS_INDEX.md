@@ -1,15 +1,15 @@
 # Skills Index
 
-*Generated: 2025-12-29 01:20*
+*Generated: 2025-12-29 01:26*
 
 ## Summary
 
 | Category | Count | Description |
 |----------|-------|-------------|
-| [development](#development) | 149 | Code, architecture, review, testing, debugging |
+| [development](#development) | 148 | Code, architecture, review, testing, debugging |
 | [scientific](#scientific) | 74 | Data science, bioinformatics, chemistry, research tools |
+| [business](#business) | 28 | Product management, strategy, compliance, advisory |
 | [content](#content) | 28 | SEO, copywriting, social media, marketing content |
-| [business](#business) | 27 | Product management, strategy, compliance, advisory |
 | [meta](#meta) | 19 | Planning, brainstorming, skill creation, frameworks |
 | [documents](#documents) | 16 | PDF, Word, Excel, PowerPoint, document processing |
 | [devops](#devops) | 9 | Docker, Kubernetes, CI/CD, cloud infrastructure |
@@ -25,7 +25,6 @@
 |-------|-------------|
 | [adaptyv](development/adaptyv) | Cloud laboratory platform for automated protein testing and validation. Use when... |
 | [aeon](development/aeon) | This skill should be used for time series machine learning tasks including class... |
-| [ajtbd](development/ajtbd) |  |
 | [api-testing-observability](development/api-testing-observability) |  |
 | [application-performance](development/application-performance) |  |
 | [arboreto](development/arboreto) | Infer gene regulatory networks (GRNs) from gene expression data using scalable a... |
@@ -254,6 +253,41 @@
 | [ux-researcher-designer](scientific/ux-researcher-designer) | UX research and design toolkit for Senior UX Designer/Researcher including data-... |
 | [vaex](scientific/vaex) | Use this skill for processing and analyzing large tabular datasets (billions of ... |
 
+## Business
+
+*Product management, strategy, compliance, advisory*
+
+| Skill | Description |
+|-------|-------------|
+| [accessibility-compliance](business/accessibility-compliance) |  |
+| [agile-product-owner](business/agile-product-owner) | Agile product ownership toolkit for Senior Product Owner including INVEST-compli... |
+| [ajtbd](business/ajtbd) |  |
+| [business-analytics](business/business-analytics) |  |
+| [business-analytics-reporter](business/business-analytics-reporter) | This skill should be used when analyzing business sales and revenue data from CS... |
+| [ceo-advisor](business/ceo-advisor) | Executive leadership guidance for strategic decision-making, organizational deve... |
+| [competitive-ads-extractor](business/competitive-ads-extractor) | Extracts and analyzes competitors' ads from ad libraries (Facebook, LinkedIn, et... |
+| [critical-validator](business/critical-validator) | This skill should be used when validating user prompts, plans, or requests befor... |
+| [cto-advisor](business/cto-advisor) | Technical leadership guidance for engineering teams, architecture decisions, and... |
+| [finance-manager](business/finance-manager) | Comprehensive personal finance management system for analyzing transaction data,... |
+| [finishing-a-development-branch](business/finishing-a-development-branch) | Use when implementation is complete, all tests pass, and you need to decide how ... |
+| [game-development](business/game-development) |  |
+| [gdpr-dsgvo-expert](business/gdpr-dsgvo-expert) | Senior GDPR/DSGVO expert and internal/external auditor for data protection compl... |
+| [hr-legal-compliance](business/hr-legal-compliance) |  |
+| [isms-audit-expert](business/isms-audit-expert) | Senior ISMS Audit Expert for internal and external information security manageme... |
+| [julia-development](business/julia-development) |  |
+| [product-manager-toolkit](business/product-manager-toolkit) | Comprehensive toolkit for product managers including RICE prioritization, custom... |
+| [product-strategist](business/product-strategist) | Strategic product leadership toolkit for Head of Product including OKR cascade g... |
+| [qms-audit-expert](business/qms-audit-expert) | Senior QMS Audit Expert for internal and external quality management system audi... |
+| [quality-manager-qmr](business/quality-manager-qmr) | Senior Quality Manager Responsible Person (QMR) for HealthTech and MedTech compa... |
+| [quality-manager-qms-iso13485](business/quality-manager-qms-iso13485) | ISO 13485 Quality Management System specialist for medical device companies. Pro... |
+| [reactome-database](business/reactome-database) | Query Reactome REST API for pathway analysis, enrichment, gene-pathway mapping, ... |
+| [regulatory-affairs-head](business/regulatory-affairs-head) | Senior Regulatory Affairs Manager expertise for HealthTech and MedTech companies... |
+| [resume-manager](business/resume-manager) | This skill should be used whenever users need help with resume creation, updatin... |
+| [startup-validator](business/startup-validator) | Comprehensive startup idea validation and market analysis tool. Use when users n... |
+| [storyboard-manager](business/storyboard-manager) | Assist writers with story planning, character development, plot structuring, cha... |
+| [subagent-driven-development](business/subagent-driven-development) | Use when executing implementation plans with independent tasks in the current se... |
+| [theme-factory](business/theme-factory) | Toolkit for styling artifacts with a theme. These artifacts can be slides, docs,... |
+
 ## Content
 
 *SEO, copywriting, social media, marketing content*
@@ -288,40 +322,6 @@
 | [web-scripting](content/web-scripting) |  |
 | [youtube-transcript](content/youtube-transcript) | Download YouTube video transcripts using Playwright browser automation. Use when... |
 | [zinc-database](content/zinc-database) | Access ZINC (230M+ purchasable compounds). Search by ZINC ID/SMILES, similarity ... |
-
-## Business
-
-*Product management, strategy, compliance, advisory*
-
-| Skill | Description |
-|-------|-------------|
-| [accessibility-compliance](business/accessibility-compliance) |  |
-| [agile-product-owner](business/agile-product-owner) | Agile product ownership toolkit for Senior Product Owner including INVEST-compli... |
-| [business-analytics](business/business-analytics) |  |
-| [business-analytics-reporter](business/business-analytics-reporter) | This skill should be used when analyzing business sales and revenue data from CS... |
-| [ceo-advisor](business/ceo-advisor) | Executive leadership guidance for strategic decision-making, organizational deve... |
-| [competitive-ads-extractor](business/competitive-ads-extractor) | Extracts and analyzes competitors' ads from ad libraries (Facebook, LinkedIn, et... |
-| [critical-validator](business/critical-validator) | This skill should be used when validating user prompts, plans, or requests befor... |
-| [cto-advisor](business/cto-advisor) | Technical leadership guidance for engineering teams, architecture decisions, and... |
-| [finance-manager](business/finance-manager) | Comprehensive personal finance management system for analyzing transaction data,... |
-| [finishing-a-development-branch](business/finishing-a-development-branch) | Use when implementation is complete, all tests pass, and you need to decide how ... |
-| [game-development](business/game-development) |  |
-| [gdpr-dsgvo-expert](business/gdpr-dsgvo-expert) | Senior GDPR/DSGVO expert and internal/external auditor for data protection compl... |
-| [hr-legal-compliance](business/hr-legal-compliance) |  |
-| [isms-audit-expert](business/isms-audit-expert) | Senior ISMS Audit Expert for internal and external information security manageme... |
-| [julia-development](business/julia-development) |  |
-| [product-manager-toolkit](business/product-manager-toolkit) | Comprehensive toolkit for product managers including RICE prioritization, custom... |
-| [product-strategist](business/product-strategist) | Strategic product leadership toolkit for Head of Product including OKR cascade g... |
-| [qms-audit-expert](business/qms-audit-expert) | Senior QMS Audit Expert for internal and external quality management system audi... |
-| [quality-manager-qmr](business/quality-manager-qmr) | Senior Quality Manager Responsible Person (QMR) for HealthTech and MedTech compa... |
-| [quality-manager-qms-iso13485](business/quality-manager-qms-iso13485) | ISO 13485 Quality Management System specialist for medical device companies. Pro... |
-| [reactome-database](business/reactome-database) | Query Reactome REST API for pathway analysis, enrichment, gene-pathway mapping, ... |
-| [regulatory-affairs-head](business/regulatory-affairs-head) | Senior Regulatory Affairs Manager expertise for HealthTech and MedTech companies... |
-| [resume-manager](business/resume-manager) | This skill should be used whenever users need help with resume creation, updatin... |
-| [startup-validator](business/startup-validator) | Comprehensive startup idea validation and market analysis tool. Use when users n... |
-| [storyboard-manager](business/storyboard-manager) | Assist writers with story planning, character development, plot structuring, cha... |
-| [subagent-driven-development](business/subagent-driven-development) | Use when executing implementation plans with independent tasks in the current se... |
-| [theme-factory](business/theme-factory) | Toolkit for styling artifacts with a theme. These artifacts can be slides, docs,... |
 
 ## Meta
 
