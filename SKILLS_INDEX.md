@@ -1,6 +1,6 @@
 # Skills Index
 
-*Generated: 2025-12-29 01:26*
+*Generated: 2025-12-29 01:39*
 
 ## Summary
 
@@ -9,13 +9,13 @@
 | [development](#development) | 148 | Code, architecture, review, testing, debugging |
 | [scientific](#scientific) | 74 | Data science, bioinformatics, chemistry, research tools |
 | [business](#business) | 28 | Product management, strategy, compliance, advisory |
-| [content](#content) | 28 | SEO, copywriting, social media, marketing content |
+| [content](#content) | 27 | SEO, copywriting, social media, marketing content |
 | [meta](#meta) | 19 | Planning, brainstorming, skill creation, frameworks |
 | [documents](#documents) | 16 | PDF, Word, Excel, PowerPoint, document processing |
 | [devops](#devops) | 9 | Docker, Kubernetes, CI/CD, cloud infrastructure |
 | [ai-ml](#ai-ml) | 5 | LLM, prompts, agents, machine learning |
 | [automation](#automation) | 5 | n8n, MCP, browser automation, workflows |
-| **Total** | **332** | |
+| **Total** | **331** | |
 
 ## Development
 
@@ -304,7 +304,6 @@
 | [marketing-demand-acquisition](content/marketing-demand-acquisition) | Multi-channel demand generation, paid media optimization, SEO strategy, and part... |
 | [marketing-skill](content/marketing-skill) |  |
 | [marketing-strategy-pmm](content/marketing-strategy-pmm) | Product marketing, positioning, GTM strategy, and competitive intelligence. Incl... |
-| [merlin-content-writer](content/merlin-content-writer) | Content creation for Merlin's personal brand (Telegram RU, Twitter EN). Use when... |
 | [opentargets-database](content/opentargets-database) | Query Open Targets Platform for target-disease associations, drug target discove... |
 | [pitch-deck](content/pitch-deck) | Generate professional PowerPoint pitch decks for startups and businesses. Use th... |
 | [script-writer](content/script-writer) | This skill should be used whenever users need YouTube video scripts written. On ... |
