@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Creator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1a18;
+      --paper: #f8f6f1;
+      --copper: #b5684a;
+      --copper-soft: #d4a088;
+      --stone: #9a9590;
+      --mist: #e8e4de;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 300;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+      letter-spacing: 0.01em;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(24px, 5vw, 80px);
+    }
+
+    /* Header */
+    header {
+      padding: 32px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      background: linear-gradient(to bottom, var(--paper) 60%, transparent);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .nav-hint {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--stone);
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 15%;
+      right: -5%;
+      width: 40vw;
+      height: 40vw;
+      background: radial-gradient(ellipse at center, var(--copper-soft) 0%, transparent 70%);
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 8vw, 120px);
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 400;
+      line-height: 1.05;
+      margin-bottom: 32px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-text h1 span {
+      display: block;
+      font-style: italic;
+      color: var(--copper);
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: var(--stone);
+      max-width: 380px;
+      margin-bottom: 48px;
+    }
+
+    .hero-visual {
+      position: relative;
+      aspect-ratio: 4/5;
+    }
+
+    .hero-visual::before {
+      content: '';
+      position: absolute;
+      inset: 20px;
+      border: 1px solid var(--copper-soft);
+      opacity: 0.4;
+    }
+
+    .hero-visual::after {
+      content: 'CC';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(6rem, 15vw, 12rem);
+      font-weight: 400;
+      color: var(--mist);
+      letter-spacing: -0.05em;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: var(--stone);
+    }
+
+    .scroll-indicator::after {
+      content: '';
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--copper), transparent);
+      animation: scroll-pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scroll-pulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(0.5); }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
+
+    /* Section base */
+    section {
+      padding: clamp(80px, 12vh, 160px) 0;
+    }
+
+    .section-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: var(--copper);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--copper);
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 48px;
+      max-width: 600px;
+    }
+
+    /* Features */
+    .features {
+      background: var(--ink);
+      color: var(--paper);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .features::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: 50%;
+      width: 100vw;
+      height: 100vw;
+      background: radial-gradient(ellipse at center, var(--copper) 0%, transparent 50%);
+      opacity: 0.05;
+      pointer-events: none;
+    }
+
+    .features .section-label {
+      color: var(--copper-soft);
+    }
+
+    .features .section-label::before {
+      background: var(--copper-soft);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.1);
+      margin-top: 64px;
+    }
+
+    .feature-card {
+      background: var(--ink);
+      padding: clamp(32px, 5vw, 56px);
+      position: relative;
+      transition: background 0.4s ease;
+    }
+
+    .feature-card:hover {
+      background: #222220;
+    }
+
+    .feature-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 400;
+      color: var(--copper-soft);
+      opacity: 0.3;
+      position: absolute;
+      top: 24px;
+      right: 32px;
+      line-height: 1;
+    }
+
+    .feature-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 16px;
+      color: var(--paper);
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: var(--stone);
+      line-height: 1.8;
+      max-width: 280px;
+    }
+
+    /* Tools */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: clamp(24px, 4vw, 48px);
+      margin-top: 64px;
+    }
+
+    .tool-card {
+      border: 1px solid var(--mist);
+      padding: clamp(32px, 5vw, 48px);
+      position: relative;
+      transition: all 0.4s ease;
+    }
+
+    .tool-card:hover {
+      border-color: var(--copper-soft);
+      transform: translateY(-4px);
+    }
+
+    .tool-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 0;
+      background: var(--copper);
+      transition: height 0.4s ease;
+    }
+
+    .tool-card:hover::before {
+      height: 100%;
+    }
+
+    .tool-icon {
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--copper-soft);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--copper);
+    }
+
+    .tool-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .tool-card p {
+      font-size: 0.875rem;
+      color: var(--stone);
+    }
+
+    .tool-tag {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--copper);
+      padding: 6px 12px;
+      border: 1px solid var(--copper-soft);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--mist);
+      padding: 48px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+    }
+
+    .footer-note {
+      font-size: 0.75rem;
+      color: var(--stone);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .features-grid,
+      .tools-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-number {
+        position: static;
+        margin-bottom: 16px;
+        opacity: 0.5;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <div class="logo">Content Creator</div>
+      <div class="nav-hint">Claude Skill</div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>
+            Создавайте
+            <span>контент</span>
+          </h1>
+          <p>
+            Комплексный инструмент для создания маркетингового контента
+            с единым голосом бренда и SEO-оптимизацией.
+          </p>
+        </div>
+        <div class="hero-visual"></div>
+      </div>
+    </div>
+    <div class="scroll-indicator">Scroll</div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="section-label">Возможности</div>
+      <h2 class="section-title">Всё необходимое для профессионального контент-маркетинга</h2>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-number">01</span>
+          <h3>Голос бренда</h3>
+          <p>Анализируйте и развивайте уникальный стиль коммуникации. Создавайте контент, который узнают с первых строк.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-number">02</span>
+          <h3>SEO-оптимизация</h3>
+          <p>Повышайте видимость контента в поисковых системах. Автоматический анализ ключевых слов и структуры.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-number">03</span>
+          <h3>Шаблоны контента</h3>
+          <p>Готовые структуры для блогов, социальных сетей и email-рассылок. От how-to до thought leadership.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-number">04</span>
+          <h3>Контент-календарь</h3>
+          <p>Планируйте публикации на месяц вперёд. Соблюдайте баланс контент-пилларов и оптимальное время постинга.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tools">
+    <div class="container">
+      <div class="section-label">Инструменты</div>
+      <h2 class="section-title">Скрипты для автоматизации</h2>
+
+      <div class="tools-grid">
+        <div class="tool-card">
+          <div class="tool-icon">Bv</div>
+          <h3>Brand Voice Analyzer</h3>
+          <p>Анализирует текст на соответствие голосу бренда, оценивает читабельность и даёт рекомендации по улучшению.</p>
+          <span class="tool-tag">Python Script</span>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">Se</div>
+          <h3>SEO Optimizer</h3>
+          <p>Проверяет контент на SEO-соответствие, анализирует плотность ключевых слов и структуру заголовков.</p>
+          <span class="tool-tag">Python Script</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">Content Creator</div>
+      <div class="footer-note">Claude Skill for Content Marketing</div>
+    </div>
+  </footer>
+
+</body>
+</html>
